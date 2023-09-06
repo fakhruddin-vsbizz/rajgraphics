@@ -70,10 +70,10 @@ function ContactForm() {
             <fieldset>
               <legend className="text-base/6 text-neutral-500">Budget</legend>
               <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2">
-                <RadioInput label="$25K – $50K" name="budget" value="25" />
-                <RadioInput label="$50K – $100K" name="budget" value="50" />
-                <RadioInput label="$100K – $150K" name="budget" value="100" />
-                <RadioInput label="More than $150K" name="budget" value="150" />
+                <RadioInput label="₹15000 - ₹30000" name="budget" value="30000" />
+                <RadioInput label="₹30000 - ₹60000" name="budget" value="60000" />
+                <RadioInput label="₹60000 - ₹120000" name="budget" value="120000" />
+                <RadioInput label="₹120000+" name="budget" value=">120000" />
               </div>
             </fieldset>
           </div>
@@ -93,8 +93,7 @@ function ContactDetails() {
         Our offices
       </h2>
       <p className="mt-6 text-base text-neutral-600">
-        Prefer doing things in person? We don’t but we have to list our
-        addresses here for legal reasons.
+        We'd love to talk with you with a lot of interesting conversations, lots of solutions and maybe, lots of coffee :)
       </p>
 
       <Offices className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2" />
@@ -105,8 +104,7 @@ function ContactDetails() {
         </h2>
         <dl className="mt-6 grid grid-cols-1 gap-8 text-sm sm:grid-cols-2">
           {[
-            ['Careers', 'careers@studioagency.com'],
-            ['Press', 'press@studioagency.com'],
+            ['Email', 'rajgraphics72@gmail.com'],
           ].map(([label, email]) => (
             <div key={email}>
               <dt className="font-semibold text-neutral-950">{label}</dt>
@@ -142,7 +140,7 @@ export default function Contact() {
   return (
     <>
       <PageIntro eyebrow="Contact us" title="Let’s work together">
-        <p>We can’t wait to hear from you.</p>
+        <p>We can’t wait to hear from you. We would love to meet you and have a cup of coffee</p>
       </PageIntro>
 
       <Container className="mt-24 sm:mt-32 lg:mt-40">
