@@ -22,12 +22,6 @@ import imageLaptop from '@/images/laptop.jpg'
 import { loadCaseStudies } from '@/lib/mdx'
 import { GridPattern } from '@/components/GridPattern'
 
-
-import ht from '@/images/rajgraphics/happythreads.jpeg'
-import fmb from '@/images/rajgraphics/fmb.jpeg'
-import vbs from '@/images/rajgraphics/vbs.jpeg'
-import mz from '@/images/rajgraphics/mz.jpeg'
-
 import nxtjs from '@/images/rajgraphics/nextjs.png'
 import twcss from '@/images/rajgraphics/tailwindcss.jpeg'
 import jslang from '@/images/rajgraphics/jslang.png'
@@ -40,13 +34,6 @@ import postgresql from '@/images/rajgraphics/postgresql.png'
 import python from '@/images/rajgraphics/python.webp'
 import php from '@/images/rajgraphics/php.png'
 
-const clients = [
-  ['Faiz Ul Mawaid Ul Burhaniyah', fmb],
-  ['Happy Threads', ht],
-  ['Valiant Business Solutions', vbs],
-  ['Mahad Al Zahra', mz],
-  ,
-]
 
 
 const technology = [
@@ -96,38 +83,7 @@ function Technologies() {
 }
 
 
-function Clients() {
-  return (
-    <div className="mt-24 rounded-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
-      <Container>
-        <FadeIn className="flex items-center gap-x-8">
-          <h1 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            Here is a family of people we have made our kin with
-          </h1>
-          <div className="h-px flex-auto bg-neutral-800" />
-        </FadeIn>
-        <FadeInStagger faster>
-          <ul
-            role="list"
-            className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
-          >
-            {clients.map(([client, logo]) => (
-              <li key={client}>
-                <FadeIn>
-                  <center>
-                    <Image className='items-center' src={logo} alt={client} style={{ borderRadius: "50%", width: '150px', height: '150px' }} unoptimized />
-                    <br></br>
-                    <h4 className='text-white sm:text-center font-display text-2xl'>{client}</h4>
-                  </center>
-                </FadeIn>
-              </li>
-            ))}
-          </ul>
-        </FadeInStagger>
-      </Container>
-    </div >
-  )
-}
+
 
 function CaseStudies({ caseStudies }) {
   return (
@@ -245,8 +201,6 @@ export default async function Home() {
         </FadeIn>
       </Container>
 
-      <Clients />
-
       <CaseStudies caseStudies={caseStudies} />
 
       <GridPattern
@@ -255,12 +209,6 @@ export default async function Home() {
       />
       <Technologies />
 
-      <Testimonial
-        className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'VBS', logo: vbs }}
-      >
-        Working with Raj Graphics on our product development has been nothing short of exceptional. Their team's expertise and commitment to excellence have been instrumental in turning our vision into a reality.
-      </Testimonial>
 
       <Services />
 
