@@ -52,16 +52,16 @@ const technology = [
 
 function Technologies() {
   return (
-    <Container className="mt-24 sm:mt-32 lg:mt-40 bg-black p-8">
+    <Container className="mt-24 sm:mt-32 lg:mt-40 bg-black p-8 rounded-lg">
       <FadeIn>
-        <h2 className="font-display text-4xl font-semibold text-neutral-950 text-white">
+        <h2 className="font-display text-4xl font-semibold text-neutral-950 text-white p-4">
           Just lay a finger and we will do it
         </h2>
-        <h4 className="font-display text-xl font-semibold text-neutral-950 text-white">
+        <h4 className="font-display text-xl font-semibold text-neutral-950 text-white p-4">
           Our expertise in working with market-dominant technologies enables us to provide you with innovative solutions that leverage the full potential of these cutting-edge tools
         </h4>
       </FadeIn>
-      <FadeInStagger className="mt-10" faster>
+      <FadeInStagger className="mt-10 p-4" faster>
         <Border as={FadeIn} />
         <ul
           role="list"
@@ -102,15 +102,13 @@ function CaseStudies({ caseStudies }) {
             <FadeIn key={caseStudy.href} className="flex">
               <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
                 <h3>
-                  <Link href={caseStudy.href}>
-                    <span className="absolute inset-0 rounded-3xl" />
-                    <Image
-                      src={caseStudy.logo}
-                      alt={caseStudy.client}
-                      className="h-16 w-16"
-                      unoptimized
-                    />
-                  </Link>
+                  <span className="absolute inset-0 rounded-3xl" />
+                  <Image
+                    src={caseStudy.logo}
+                    alt={caseStudy.client}
+                    className="h-16 w-16"
+                    unoptimized
+                  />
                 </h3>
                 <p className="mt-6 flex gap-x-2 text-sm text-neutral-950">
                   <time

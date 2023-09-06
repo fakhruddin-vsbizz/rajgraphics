@@ -17,7 +17,7 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Footer } from '@/components/Footer'
 import { GridPattern } from '@/components/GridPattern'
-import { Logo, Logomark } from '@/components/Logo'
+import { Logo, Logomark, MainLogo } from '@/components/Logo'
 import { Offices } from '@/components/Offices'
 import { SocialMedia } from '@/components/SocialMedia'
 
@@ -64,17 +64,13 @@ function Header({
             invert={invert}
             filled={logoHovered}
           />
-          <Logo
-            className="hidden h-8 sm:block"
-            invert={invert}
-            filled={logoHovered}
-          />
+          <MainLogo />
         </Link>
         <div className="flex items-center gap-x-8">
           <Button href="/contact" invert={invert}>
             Contact us
           </Button>
-          <button
+          {/* <button
             ref={toggleRef}
             type="button"
             onClick={onToggle}
@@ -94,7 +90,7 @@ function Header({
                   : 'fill-neutral-950 group-hover:fill-neutral-700',
               )}
             />
-          </button>
+          </button> */}
         </div>
       </div>
     </Container>
